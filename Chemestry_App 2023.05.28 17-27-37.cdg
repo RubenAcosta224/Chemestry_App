@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Chemestry_App">
+  <ClassDiagramComponents>
+    <Class name="Atomo_hidrogeno" package="Unidad_1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="RH" type="double" visibility="private"/>
+        <Field name="nivelIN" type="double" visibility="private"/>
+        <Field name="nivelFIN" type="double" visibility="private"/>
+        <Field name="E1" type="double" visibility="private"/>
+        <Field name="E2" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numEntrada"/>
+          <Argument type="String" name="numEntrada2"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Energia" returnType="String" visibility="public"/>
+        <Method name="evaluarSalida" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DatoEntradaCheckedEx" package="Unidad_1" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="DatosDefinidosEx" package="Unidad_1" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Energia_cuantizada" package="Unidad_1" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="h" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numEntrada"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Frecuencia_Radiacion" returnType="double" visibility="public"/>
+        <Method name="Energia" returnType="double" visibility="public"/>
+        <Method name="energia_por_longOnda" returnType="double" visibility="public"/>
+        <Method name="longOnda_por_energia" returnType="double" visibility="public"/>
+        <Method name="evaluarSalida" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Formula" package="Unidad_1" visibility="public" isAbstract="true" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="numEntrada" type="double" visibility="private"/>
+        <Field name="numEntrada2" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numEntrada"/>
+          <Argument type="String" name="numEntrada2"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="numEntrada"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNumEntrada" returnType="double" visibility="public"/>
+        <Method name="setNumEntrada" returnType="void" visibility="public">
+          <Argument type="String" name="numEntrada"/>
+        </Method>
+        <Method name="getNumEntrada2" returnType="double" visibility="public"/>
+        <Method name="setNumEntrada2" returnType="void" visibility="public">
+          <Argument type="String" name="numEntrada2"/>
+        </Method>
+        <Method name="esUnNumero" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="tmp"/>
+        </Method>
+        <Method name="evaluarSalida" returnType="double" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Teoria_ondulatoria_de_la_luz" package="Unidad_1" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="c" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numEntrada"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="LongOnda" returnType="double" visibility="public"/>
+        <Method name="FrecuenciaRadiacion" returnType="double" visibility="public"/>
+        <Method name="evaluarSalida" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CargaNuclear" package="Unidad_2" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="z" type="int" visibility="private"/>
+        <Field name="Nn" type="int" visibility="private"/>
+        <Field name="n" type="int" visibility="private"/>
+        <Field name="N" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="z"/>
+          <Argument type="String" name="Nn"/>
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="N"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getZ" returnType="int" visibility="public"/>
+        <Method name="setZ" returnType="void" visibility="public">
+          <Argument type="String" name="z"/>
+        </Method>
+        <Method name="getNn" returnType="int" visibility="public"/>
+        <Method name="setNn" returnType="void" visibility="public">
+          <Argument type="String" name="Nn"/>
+        </Method>
+        <Method name="getn" returnType="int" visibility="public"/>
+        <Method name="setn" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="getN" returnType="int" visibility="public"/>
+        <Method name="setN" returnType="void" visibility="public">
+          <Argument type="String" name="N"/>
+        </Method>
+        <Method name="calcularZE" returnType="double" visibility="public"/>
+        <Method name="calcularEA" returnType="double" visibility="public"/>
+        <Method name="esUnNumero" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="tmp"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ElementoQuimico" package="Unidad_3" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="cantidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="String" name="cantidad"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="calcularEnlaces" returnType="int" visibility="public"/>
+        <Method name="calcularEnlacesNoUtilizados" returnType="int" visibility="public"/>
+        <Method name="esUnNumero" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="tmp"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Integrantes" package="Ventanas" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Main" package="Ventanas" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_Integrantes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Salir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Unidad_1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Unidad_2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Unidad_3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_Unidad_1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Unidad_3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_IntegrantesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Unidad_3MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Unidad_2MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Unidad_1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_IntegrantesMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_SalirMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Unidad_2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Unidad_1" package="Ventanas" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_Atomos_de_Hidrogeno" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Energia_Cuantizada" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Teoria_Ondulatoria" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Teoria_OndulatoriaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Teoria_OndulatoriaMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Energia_CuantizadaMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Energia_CuantizadaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Atomos_de_HidrogenoMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Atomos_de_HidrogenoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Unidad_2" package="Ventanas" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_Carga_Nuclear" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_Carga_NuclearMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Unidad_3" package="Ventanas" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_VolverActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Atomos_de_Hidrogeno" package="Ventanas_Unidad_1" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_Energia" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Input_1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Input_2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Resultado" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_EnergiaMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Energia_Cuantizada" package="Ventanas_Unidad_1" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_Energia" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_FreccRad" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Input" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Resultado" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_EnergiaMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_FreccRadMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_EnergiaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Teoria_Ondulatoria" package="Ventanas_Unidad_1" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="Btn_FreccRad" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_LongOnda" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Input" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Resultado" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_LongOndaMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_FreccRadMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Carga_Nuclear" package="Ventanas_Unidad_2" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Calcular_Carga" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Input_N" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Input_Nn" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Input_n" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Input_z" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Resultado" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Input_zActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Input_NnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Input_nActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Input_NActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Calcular_CargaMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vent_Enlaces_Quimicos" package="Ventanas_Unidad_3" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="Btn_Calcular" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Btn_Volver" type="javax.swing.JButton" visibility="private"/>
+        <Field name="InputCant1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="InputCant2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="InputName1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="InputName2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Resultado" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="InputName1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_VolverMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Btn_CalcularMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Unidad_1.Teoria_ondulatoria_de_la_luz" target="Unidad_1.Formula"/>
+    <IsRelation name="is" source="Unidad_1.Energia_cuantizada" target="Unidad_1.Formula"/>
+    <IsRelation name="is" source="Unidad_1.Atomo_hidrogeno" target="Unidad_1.Formula"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
